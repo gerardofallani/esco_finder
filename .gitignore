@@ -1,0 +1,25 @@
+
+---
+
+### 📄 `.gitignore`
+
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite
+*.db
+
+# Streamlit
+.streamlit/
+
+# VSCode / Brackets / JetBrains
+.vscode/
+.idea/
+*.sublime*
+
+# MacOS
+.DS_Store
+
+# Jupyter / altri
+.ipynb_checkpoints/
