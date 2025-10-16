@@ -23,3 +23,9 @@ __pycache__/
 
 # Jupyter / altri
 .ipynb_checkpoints/
+
+*.zip
+*.csv
+__MACOSX/
+it/
+en/
