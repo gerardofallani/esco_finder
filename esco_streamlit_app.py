@@ -1,5 +1,25 @@
 # esco_streamlit_app.py
 
+import os
+import zipfile
+import urllib.request
+
+DB_ZIP_URL = "https://github.com/gerardofallani/esco_finder/releases/download/v1.0/esco_it.sqlite.zip"
+DB_ZIP_NAME = "esco_it.sqlite.zip"
+DB_NAME = "esco_it.sqlite"
+
+if not os.path.exists(DB_NAME):
+    # Scarica il file zip
+    urllib.request.urlretrieve(DB_ZIP_URL, DB_ZIP_NAME)
+    
+    # Estrai lo zip
+    with zipfile.ZipFile(DB_ZIP_NAME, 'r') as zip_ref:
+        zip_ref.extractall()
+    
+    # Rimuovi lo zip dopo l’estrazione (opzionale)
+    os.remove(DB_ZIP_NAME)
+
+
 import streamlit as st
 import sqlite3
 import pandas as pd
